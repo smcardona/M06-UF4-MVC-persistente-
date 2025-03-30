@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS books (
+  book_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  author VARCHAR(255),
+  publisher VARCHAR(255),
+  publication_date DATE,
+  genre VARCHAR(255),
+  isbn VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  user_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(40) UNIQUE,
+  password VARCHAR(64)
+)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat de llibres</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <h3>Usuari connectat: <span th:text="${user.username}"></span></h3>
+
+    <center>
+        <H1>Llista de llibres</H1>
+        <table border=1>
+            <thead>
+                <tr>
+                    <th>IdLlibre</th>
+                    <th>Títol</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Data d'edició</th>
+                    <th>Temàtica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${llibres.empty}" >
+                    <td colspan="2">No hi ha llibres disponibles</td>
+                </tr>
+                <tr th:each="llibre:${llibres}">
+                    <td><span th:text="${llibre.bookId}"></span></td>
+                    <td><span th:text="${llibre.title}"></span></td>
+                    <td><span th:text="${llibre.author}"></span></td>
+                    <td><span th:text="${llibre.publisher}"></span></td>
+                    <td><span th:text="${llibre.publicationDate}"></span></td>
+                    <td><span th:text="${llibre.genre}"></span></td>
+                    <td><span th:text="${llibre.ISBN}"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="/index">Tornar enrere</a></p>    
+    </center>
+</body>
+</html>

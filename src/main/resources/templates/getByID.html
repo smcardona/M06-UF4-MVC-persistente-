@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <center>
+        <h1>Cerca de llibre per id</h1>
+            <form action="/find" method="post">
+                Id del Llibre: <input type="text" name="idLlibre"><br><br>
+                <input type=submit name="submit" value="Cerca">
+            </form>
+            <br></br>
+
+            <p th:if="${llibreErr}" th:text="${llibreErr}" style="color:red;"></p>
+            
+            <table th:if="${llibre}" border=1>
+                <thead>
+                    <tr>
+                        <th>IdLlibre</th>
+                        <th>Títol</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>Data d'edició</th>
+                        <th>Temàtica</th>
+                        <th>ISBN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td><span th:text="${llibre.bookId}"></span></td>
+                    <td><span th:text="${llibre.title}"></span></td>
+                    <td><span th:text="${llibre.author}"></span></td>
+                    <td><span th:text="${llibre.publisher}"></span></td>
+                    <td><span th:text="${llibre.publicationDate}"></span></td>
+                    <td><span th:text="${llibre.genre}"></span></td>
+                    <td><span th:text="${llibre.ISBN}"></span></td>
+                </tbody>
+            </table>
+
+            <p><a href="/index">Tornar enrere</a></p>        
+    </center>
+    
+</body>
+</html>

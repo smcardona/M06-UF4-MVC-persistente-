@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Bienvenida</title>
+</head>
+<body>
+  <center>
+    <h1 th:text="${message}"></h1>
+    <a href="/user/login">
+      <button>Ir al login</button>
+    </a>
+  </center>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accés a l'aplicació</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <center>
+    <H1>Llibreria del poble</H1>
+    <form action="/user/login" method="post">
+      Usuari: <input type="text" name="username"><br><br>
+      Contrasenya: <input type="password" name="password"><br><br>
+      <input type=submit name="submit" value="Accedir">
+    </form>
+
+    <p>No tens un compte? <a href="/user/sign-in">Registra't aquí</a></p>
+
+    <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+    <p th:if="${success}" th:text="${success}" style="color:green;"></p>
+
+    </center>
+</body>
+</html>
