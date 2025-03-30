@@ -1,5 +1,13 @@
 # SPRING WEB CON MARIADB
 
+Indice:
+
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Endpoints de `BookController`](#endpoints-de-bookcontroller)
+- [Endpoints de `UserController`](#endpoints-de-usercontroller)
+- [Scripts para la base de datos](#scripts-para-la-base-de-datos)
+- [Preguntas de reflexión y análisis](#preguntas-de-reflexión-y-analisis)
+
 ## Descripción del Proyecto
 
 Este proyecto es una aplicación web desarrollada con Spring Framework y MariaDB como base de datos. La aplicación permite gestionar libros y usuarios, proporcionando funcionalidades como inserción, consulta, y autenticación de usuarios.
