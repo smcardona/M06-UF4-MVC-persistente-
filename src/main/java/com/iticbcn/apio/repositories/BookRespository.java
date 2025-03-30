@@ -1,6 +1,5 @@
 package com.iticbcn.apio.repositories;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 import org.springframework.data.repository.CrudRepository;
@@ -11,8 +10,6 @@ import com.iticbcn.apio.models.Book;
 
 @Repository
 public interface BookRespository extends CrudRepository<Book, Long> {
-
-    ArrayList<Book> llibres = new ArrayList<Book>();
 
     @Override
     @NonNull
